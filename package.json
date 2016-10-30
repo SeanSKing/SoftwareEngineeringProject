@@ -1,14 +1,14 @@
 {
-  "name": "node-login",
-  "version": "1.5.0",
-  "description": "A template for quickly building login systems on top of Node.js & MongoDb",
-  "author": "Stephen Braitsch <stephen@braitsch.io>",
+  "name": "software-engineering-project",
+  "version": "0.0.1",
+  "description": "math game Node.js & MongoDb",
+  "author": "Group5",
   "website": {
     "url": "https://nodejs-login.herokuapp.com"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:braitsch/node-login.git"
+    "url": "git+ssh://git@github.com/SeanKing111/SoftwareEngineeringProject.git"
   },
   "dependencies": {
     "body-parser": "1.14.1",
@@ -28,5 +28,12 @@
   },
   "scripts": {
     "start": "node app.js"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/github.com/SeanKing111/SoftwareEngineeringProject/issues"
+  },
+  "homepage": "https://github.com/SeanKing111/SoftwareEngineeringProject#readme",
+  "main": "app.js",
+  "devDependencies": {},
+  "license": "ISC"
 }
