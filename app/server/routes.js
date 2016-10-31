@@ -1,5 +1,6 @@
 
 var CT = require('./modules/country-list');
+var UL = require('./modules/user-list');
 var AM = require('./modules/account-manager');
 var EM = require('./modules/email-dispatcher');
 
@@ -47,6 +48,7 @@ module.exports = function(app) {
 		}	else{
 			res.render('home', {
 				title : 'Control Panel',
+				users  : UL,
 				countries : CT,
 				udata : req.session.user
 			});
@@ -62,6 +64,7 @@ module.exports = function(app) {
 				name	: req.body['name'],
 				email	: req.body['email'],
 				pass	: req.body['pass'],
+				usertype : req.body['usertype'],
 				country	: req.body['country']
 			}, function(e, o){
 				if (e){
@@ -88,7 +91,7 @@ module.exports = function(app) {
 // creating new accounts //
 
 	app.get('/signup', function(req, res) {
-		res.render('signup', {  title: 'Signup', countries : CT });
+		res.render('signup', {  title: 'Signup', users : UL, countries : CT });
 	});
 
 	app.post('/signup', function(req, res){
@@ -97,6 +100,7 @@ module.exports = function(app) {
 			email 	: req.body['email'],
 			user 	: req.body['user'],
 			pass	: req.body['pass'],
+			users : req.body['usertype'],
 			country : req.body['country']
 		}, function(e){
 			if (e){
