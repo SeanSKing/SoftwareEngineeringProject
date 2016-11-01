@@ -29,9 +29,9 @@ input(type='hidden', value= user._id)#userId
 		.form-group
 			label.control-label.col-sm-3 Location
 			.col-sm-9
-				select.form-control#country-list(name='country')
-					each item in countries
-						option(selected=item.name == user.country)= item.name
+				select.form-control#country-list(name='county')
+					each item in counties
+						option(selected=item.name == user.county)= item.name
 		hr
 		h6#sub2
 		.form-group

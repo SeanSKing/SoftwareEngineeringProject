@@ -94,7 +94,7 @@ exports.updateAccount = function(newData, callback)
 		o.name 		= newData.name;
 		o.email 	= newData.email;
 		o.usertype  = newData.usertype;
-		o.country 	= newData.country;
+		o.county 	= newData.county;
 		if (newData.pass == ''){
 			accounts.save(o, {safe: true}, function(e) {
 				if (e) callback(e);
