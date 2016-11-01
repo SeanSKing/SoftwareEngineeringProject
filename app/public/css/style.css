@@ -59,6 +59,9 @@ h6 {
 #login label {
   margin-left: 2px;
 }
+#login input {
+  width: 280px;
+}
 #login form {
   width: 320px;
 }
@@ -67,7 +70,7 @@ h6 {
 }
 #login .controls .button-rememember-me {
   float: left;
-  width: 150px;
+  width: 140px;
 }
 #login .controls .button-sign-in {
   float: right;
