@@ -1,5 +1,5 @@
 
-var CT = require('./modules/country-list');
+var CT = require('./modules/county-list');
 var UL = require('./modules/user-list');
 var AM = require('./modules/account-manager');
 var EM = require('./modules/email-dispatcher');
@@ -49,7 +49,7 @@ module.exports = function(app) {
 			res.render('home', {
 				title : 'Control Panel',
 				users  : UL,
-				countries : CT,
+				counties : CT,
 				udata : req.session.user
 			});
 		}
@@ -65,7 +65,7 @@ module.exports = function(app) {
 				email	: req.body['email'],
 				pass	: req.body['pass'],
 				usertype : req.body['usertype'],
-				country	: req.body['country']
+				county	: req.body['county']
 			}, function(e, o){
 				if (e){
 					res.status(400).send('error-updating-account');
@@ -91,7 +91,7 @@ module.exports = function(app) {
 // creating new accounts //
 
 	app.get('/signup', function(req, res) {
-		res.render('signup', {  title: 'Signup', users : UL, countries : CT });
+		res.render('signup', {  title: 'Signup', users : UL, counties : CT });
 	});
 
 	app.post('/signup', function(req, res){
@@ -101,7 +101,7 @@ module.exports = function(app) {
 			user 	: req.body['user'],
 			pass	: req.body['pass'],
 			usertype : req.body['usertype'],
-			country : req.body['country']
+			county : req.body['county']
 		}, function(e){
 			if (e){
 				res.status(400).send(e);
