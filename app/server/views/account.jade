@@ -22,9 +22,9 @@ input(type='hidden', value= user._id)#userId
 		.form-group
 			label.control-label.col-sm-3 User-Type
 			.col-sm-9
-				select.form-control#user-list(name='user-type')
+				select.form-control#user-list(name='usertype')
 					each item in users
-						option(selected=item.name == user.user-type)= item.name
+						option(selected=item.name == user.usertype)= item.name
 
 		.form-group
 			label.control-label.col-sm-3 Location

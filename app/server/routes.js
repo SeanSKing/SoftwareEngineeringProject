@@ -100,7 +100,7 @@ module.exports = function(app) {
 			email 	: req.body['email'],
 			user 	: req.body['user'],
 			pass	: req.body['pass'],
-			users : req.body['usertype'],
+			usertype : req.body['usertype'],
 			country : req.body['country']
 		}, function(e){
 			if (e){

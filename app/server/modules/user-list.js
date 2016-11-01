@@ -5,5 +5,6 @@
 module.exports = [
     {short:"  " , name:"Please select a user type"},
     {short:"ST" , name:"Student"},
-    {short:"PA" , name:"Parent"}
+    {short:"PA" , name:"Parent"},
+    {short:"PA" , name:"Teacher"}
 ]
