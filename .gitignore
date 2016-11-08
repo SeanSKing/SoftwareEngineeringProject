@@ -2,4 +2,3 @@ node_modules/*
 public/*
 test/artifacts/*
 .env
-.idea
