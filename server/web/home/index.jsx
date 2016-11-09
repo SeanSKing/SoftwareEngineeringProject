@@ -10,14 +10,14 @@ class HomePage extends React.Component {
 
         return (
             <Layout
-                title="Aqua"
+                title="MathGame"
                 neck={neck}
                 activeTab="home">
 
                 <div className="jumbotron">
-                    <h1>Success</h1>
+                    <h1>MathGame</h1>
                     <div>
-                        <p className="lead">Your Node.js website and user system is running.</p>
+                        <p className="lead">Welcome To MathGame!!</p>
                         <div>
                             <a className="btn btn-primary btn-lg" href="/signup">
                                 Create an account
@@ -33,7 +33,7 @@ class HomePage extends React.Component {
                     <div className="col-sm-4">
                         <div className="panel panel-default">
                             <div className="panel-body">
-                                <h3>About us</h3>
+                                <h3>About MathGame</h3>
                                 <p>
                                     At vero eos et accusamus et iusto odio
                                     dignissimos ducimus qui blanditiis
