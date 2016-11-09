@@ -16,6 +16,10 @@
   "engines": {
     "node": ">=6.0.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SeanKing111/SoftwareEngineeringProject/"
+  },
   "dependencies": {
     "async": "2.x.x",
     "bcrypt": "0.8.x",
