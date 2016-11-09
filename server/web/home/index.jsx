@@ -10,7 +10,7 @@ class HomePage extends React.Component {
 
         return (
             <Layout
-                title="Aqua"
+                title="MathGame"
                 neck={neck}
                 activeTab="home">
 
