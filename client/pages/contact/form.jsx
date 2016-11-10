@@ -57,7 +57,7 @@ class Form extends React.Component {
         if (this.state.success) {
             alert = <Alert
                 type="success"
-                message="Success. We have received your message."
+                message="Success. We have received your Donation."
             />;
         }
         else if (this.state.error) {
@@ -74,7 +74,7 @@ class Form extends React.Component {
                 <TextControl
                     ref={(c) => (this.input.name = c)}
                     name="name"
-                    label="Your name"
+                    label="Your Name:"
                     hasError={this.state.hasError.name}
                     help={this.state.help.name}
                     disabled={this.state.loading}
@@ -82,16 +82,17 @@ class Form extends React.Component {
                 <TextControl
                     ref={(c) => (this.input.email = c)}
                     name="email"
-                    label="Your email"
+                    label="Your Email Address:"
                     hasError={this.state.hasError.email}
                     help={this.state.help.email}
                     disabled={this.state.loading}
                 />
+
                 <TextareaControl
                     ref={(c) => (this.input.message = c)}
                     name="message"
-                    label="Message"
-                    rows="5"
+                    label="Donation Amount"
+                    rows="1"
                     hasError={this.state.hasError.message}
                     help={this.state.help.message}
                     disabled={this.state.loading}
@@ -102,7 +103,7 @@ class Form extends React.Component {
                         inputClasses={{ 'btn-primary': true }}
                         disabled={this.state.loading}>
 
-                        Send message
+                        Submit
                         <Spinner space="left" show={this.state.loading} />
                     </Button>
                 </ControlGroup>
@@ -111,7 +112,7 @@ class Form extends React.Component {
 
         return (
             <section>
-                <h1 className="page-header">Send a message</h1>
+                <h1 className="page-header">Donate</h1>
                 <form onSubmit={this.handleSubmit.bind(this)}>
                     {alert}
                     {formElements}
