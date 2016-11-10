@@ -10,20 +10,20 @@ class ContactPage extends React.Component {
 
         return (
             <Layout
-                title="Contact us"
+                title="Donate"
                 feet={feet}
                 activeTab="contact">
 
                 <div className="row">
                     <div className="col-sm-6" id="app-mount"></div>
                     <div className="col-sm-6 text-center">
-                        <h1 className="page-header">Contact us</h1>
+                        <h1 className="page-header">Subsriptions here</h1>
                         <p className="lead">
-                            Freddy can't wait to hear from you.
+                            Your donation is greatly appreciated.
                         </p>
                         <i className="fa fa-reply-all bamf"></i>
                         <div>
-                            1428 Elm Street &bull; San Francisco, CA 94122
+                            Subscriptions here.........
                         </div>
                     </div>
                 </div>
