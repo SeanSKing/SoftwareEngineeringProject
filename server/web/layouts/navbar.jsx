@@ -26,7 +26,7 @@ class Navbar extends React.Component {
                                 className="navbar-logo"
                                 src="/public/media/logo-square.png"
                             />
-                            <span className="navbar-brand-label">Aqua</span>
+                            <span className="navbar-brand-label">MathGame</span>
                         </a>
                     </div>
                     <div className="navbar-collapse collapse">
@@ -41,7 +41,7 @@ class Navbar extends React.Component {
                                 <a href="/signup">Sign up</a>
                             </li>
                             <li className={this.tabClass('contact')}>
-                                <a href="/contact">Contact</a>
+                                <a href="/contact">Donate</a>
                             </li>
                         </ul>
                         <ul className="nav navbar-nav navbar-right">
