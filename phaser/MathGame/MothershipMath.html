@@ -21,7 +21,7 @@
       game.load.image('sky', 'assets/starfield.jpg');
       game.load.image('ground', 'assets/platform.png');
       game.load.image('heart', 'assets/heart_2.gif');
-      game.load.image('uf0', 'assets/spaceship.png');
+      game.load.image('ufo', 'assets/spaceship.png');
     }
 
     var score = 0;
@@ -59,10 +59,37 @@
 
 
 
+      // Create ufo group
+      ufo = game.add.group();
+
+      //add 15 ufos to the group
+      ufo.createMultiple(15, 'ufo', 0, false);
+
+      // timer
+      game.time.events.repeat(Phaser.Timer.SECOND, 20, resurrect, this);
+
+      }
 
 
 
+
+    function resurrect(){
+
+      //get a dead item
+
+      var item = ufo.getFirstDead();
+
+      if(item)
+
+      {
+        //bring it back to life at the top of the screen
+        item.reset(game.world.randomX, 45);
+
+        //Change its frame
+        item.frame = game.rnd.integerInRange(0, 36);
+      }
     }
+
 
     function update() {
 
@@ -71,6 +98,13 @@
 
 
 
+
+    }
+
+
+    function render(){
+
+      game.debug.text('Living: ' + ufo.countLiving() + '    Dead: ' + ufo.countDead(), 32, 64);
 
     }
 
