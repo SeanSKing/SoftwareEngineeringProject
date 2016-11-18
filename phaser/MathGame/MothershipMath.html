@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8" />
+    <title>Mothership Math</title>
+	<script type="text/javascript" src="js/phaser.min.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+  <script type="text/javascript">
+
+    var game = new Phaser.Game(400, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+
+    function preload(){
+
+      game.load.image('sky', 'assets/starfield.jpg');
+      game.load.image('ground', 'assets/platform.png');
+      game.load.image('heart', 'assets/heart_2.gif');
+      game.load.image('uf0', 'assets/spaceship.png');
+    }
+
+    var score = 0;
+    var scoreString = '';
+    var scoreText;
+    var lives;
+    var ufo;
+
+
+
+
+    function create(){
+
+      //add background
+      game.add.sprite(0, 0, 'sky');
+
+      //create ground
+      var ground = game.add.sprite(0, game.world.height-64, 'ground');
+      ground.scale.setTo(2,2);
+
+      //score
+      scoreString = 'Score : ';
+      scoreText = game.add.text(10, 10, scoreString + score, {font: '20px Arial', fill: '#fff'});
+
+      //lives
+      lives = game.add.group();
+      game.add.text(game.world.width - 100, 10, 'Lives : ', {font: '20px Arial', fill: '#fff'});
+
+      for(var i = 0; i < 3; i++){
+
+        var heart = lives.create(game.world.width - 90 + (20 * i), 40, 'heart');
+        heart.anchor.setTo(0.5, 0.5);
+
+      }
+
+
+
+
+
+
+    }
+
+    function update() {
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+  </script>
+  </body>
+</html>
