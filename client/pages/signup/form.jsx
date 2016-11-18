@@ -112,6 +112,15 @@ class Form extends React.Component {
                     hasError={this.state.hasError.utype}
                     help={this.state.help.utype}
                     disabled={this.state.loading}
+                React.createElement("option", {
+                                value:1
+                            },"Student"),
+                            React.createElement("option", {
+                                value:2
+                            },"Teacher"),
+                            React.createElement("option", {
+                                value:3
+                            },"Parent")
                 />
                 <ControlGroup hideLabel={true} hideHelp={true}>
                     <Button
