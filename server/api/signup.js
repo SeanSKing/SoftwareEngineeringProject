@@ -33,7 +33,8 @@ internals.applyRoutes = function (server, next) {
                     name: Joi.string().required(),
                     email: Joi.string().email().lowercase().required(),
                     username: Joi.string().token().lowercase().required(),
-                    password: Joi.string().required()
+                    password: Joi.string().required(),
+                    utype: Joi.string().lowercase().required()
                 }
             },
             pre: [{
@@ -77,6 +78,19 @@ internals.applyRoutes = function (server, next) {
 
                         reply(true);
                     });
+                }
+            },  {
+                assign: 'utypeCheck',
+                method: function (request, reply) {
+
+                    const conditions = {
+                        utype: request.payload.utype
+                    };
+                        if (request.payload.utype == 'student' || request.payload.utype == 'teacher' || request.payload.utype == 'parent') {
+                            reply(true);
+                        }
+                        else
+                            return reply(Boom.conflict('Type must be Parent, Teacher, or Student'));
                 }
             }]
         },

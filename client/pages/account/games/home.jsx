@@ -46,17 +46,11 @@ class HomePage extends React.Component {
             <section className="section-home container">
                 <div className="row">
                     <div className="col-sm-7">
-                        <h1 className="page-header">My account</h1>
+                        <h1 className="page-header">Insert the game here!!</h1>
                         <div className="row">
                             <div className="col-sm-6">
 
                             </div>
-                        </div>
-                    </div>
-                    <div className="col-sm-5">
-                        <h1 className="page-header">Throttle guage</h1>
-                        <div className="text-center">
-                            <i className="fa fa-dashboard bamf"></i>
                         </div>
                     </div>
                 </div>
