@@ -66,7 +66,7 @@ class HomePage extends React.Component {
                     <div className="col-sm-5">
                         <h1 className="page-header">Throttle gauge</h1>
                         <div className="text-center">
-                            <i className="fa fa-dashboard bamf"></i>
+                            <i className="fa fa-gamepad bamf"></i>
                         </div>
                     </div>
                 </div>
