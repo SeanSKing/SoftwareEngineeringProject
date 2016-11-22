@@ -1,2 +1,4 @@
 test/artifacts/*
 .env
+node_modules/*
+npm-debug.log
