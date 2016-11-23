@@ -2,19 +2,73 @@
 const ApiActions = require('../../actions/api');
 const Constants = require('./constants');
 const Store = require('./store');
+var paypal =  require('paypal-rest-sdk');
+var url = '';
 
+//paypal sandbox credentials 
+paypal.configure({
+  'mode': 'sandbox',
+  'client_id':process.env.PAYPAL_ID,
+  'client_secret':process.env.PAYPAL_SECRET
+});
 
+//json with payment information
+var create_payment_json = {
+    "intent": "sale",
+    "payer": {
+        "payment_method": "paypal"
+    },
+    "redirect_urls": {
+        "return_url": "http://mathattack.herokuapp.com/", //need to createa thank you page
+        "cancel_url": "http://mathattack.herokuapp.com/contact" // back to donation page if it fails
+    },
+    "transactions": [{
+        "item_list": {
+            "items": [{
+                "name": "$5 donation to help Math Attack",
+                "sku": "item",
+                "price": "5.00",//donation amount is $5  
+                "currency": "USD",
+                "quantity": 1
+            }]
+        },
+        "amount": {
+            "currency": "USD",
+            "total": "5.00" //donation amount is $5  
+        },
+        "description": "Donation to Group5."
+    }]
+};
+
+paypal.payment.create(create_payment_json, function (error, payment) {
+    if (error) {
+        throw error;
+    } else {
+        //console.log("Create Payment Response");
+        //console.log(payment);
+        //console.log("\n\n\n\n\n");
+        //console.log("redirect url\n");
+        //console.log(payment.links[1].href);
+        //console.log("\n--------------------------------------");
+
+        url = payment.links[1].href; //use paypal url from payment object
+    }
+});
 class Actions {
     static sendMessage(data) {
 
         ApiActions.post(
-            '/api/contact',
-            data,
-            Store,
-            Constants.SEND_MESSAGE,
-            Constants.SEND_MESSAGE_RESPONSE
-        );
+          '/api/contact',
+           data,
+           Store,
+           Constants.SEND_MESSAGE,
+           Constants.SEND_MESSAGE_RESPONSE, );
+           window.location=url;//redirect after message is sent 
+    
     }
+
+  //
+  
 }
 
 

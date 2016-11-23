@@ -57,7 +57,7 @@ class Form extends React.Component {
         if (this.state.success) {
             alert = <Alert
                 type="success"
-                message="Success. We have received your Donation."
+                message="Success.We have received your message."
             />;
         }
         else if (this.state.error) {
@@ -88,26 +88,42 @@ class Form extends React.Component {
                     disabled={this.state.loading}
                 />
 
+
+                <Alert type="danger"
+                message="
+                User input field for donation amount will go here.
+
+                It's currently hard-coded to be $5"/>
+               
+
+
                 <TextareaControl
                     ref={(c) => (this.input.message = c)}
                     name="message"
-                    label="Donation Amount"
-                    rows="1"
+                    label="Leave us a message along with your donation:"
+                    rows="5"
                     hasError={this.state.hasError.message}
                     help={this.state.help.message}
                     disabled={this.state.loading}
                 />
-                <ControlGroup hideLabel={true} hideHelp={true}>
+                <ControlGroup hideLabel={false} hideHelp={false}>
+               <Alert
+                type="success"
+                message="You will be directed to PayPal.com to make a donation of $5.00.
+                After successfully completing the transaction you will be directed to the home page."
+            />
+
+
                     <Button
                         type="submit"
                         inputClasses={{ 'btn-primary': true }}
                         disabled={this.state.loading}>
 
-                        Submit
+                        Donate
                         <Spinner space="left" show={this.state.loading} />
                     </Button>
                 </ControlGroup>
-            </fieldset>;
+            </fieldset>
         }
 
         return (
