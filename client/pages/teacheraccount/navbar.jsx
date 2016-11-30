@@ -48,7 +48,7 @@ class Navbar extends React.Component {
             <div className="navbar navbar-default navbar-fixed-top">
                 <div className="container">
                     <div className="navbar-header">
-                        <Link className="navbar-brand" to="/account">
+                        <Link className="navbar-brand" to="/teacheraccount">
                             <img className="navbar-logo" src="/public/media/logo-square.png" />
                             <span className="navbar-brand-label">MathGame</span>
                         </Link>
@@ -63,14 +63,14 @@ class Navbar extends React.Component {
                     </div>
                     <div className={navBarCollapse}>
                         <ul className="nav navbar-nav">
-                            <li className={this.isPathActive('/account/games')}>
-                                <Link to="/account/games">Games</Link>
+                            <li className={this.isPathActive('/teacheraccount/games')}>
+                                <Link to="/teacheraccount/games">Games</Link>
+                            </li>F
+                            <li className={this.isPathActive('/teacheraccount')}>
+                                <Link to="/teacheraccount">My account</Link>
                             </li>
-                            <li className={this.isPathActive('/account')}>
-                                <Link to="/account">My account</Link>
-                            </li>
-                            <li className={this.isPathActive('/account/settings')}>
-                                <Link to="/account/settings">Settings</Link>
+                            <li className={this.isPathActive('/teacheraccount/settings')}>
+                                <Link to="/teacheraccount/settings">Settings</Link>
                             </li>
                         </ul>
                         <ul className="nav navbar-nav navbar-right">

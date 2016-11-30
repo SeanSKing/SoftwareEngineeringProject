@@ -13,7 +13,7 @@ class NotFoundPage extends React.Component {
             <section className="container">
                 <h1 className="page-header">Not Found</h1>
                 <p>That route didn't match any handlers.</p>
-                <Link to="/account">Go to home screen</Link>
+                <Link to="/teacheraccount">Go to home screen</Link>
             </section>
         );
     }

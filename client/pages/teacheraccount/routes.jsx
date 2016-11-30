@@ -13,17 +13,15 @@ const Route = ReactRouter.Route;
 const Router = ReactRouter.Router;
 const browserHistory = ReactRouter.browserHistory;
 
-
-const Routes = (
-    <Router history={browserHistory}>
-        <Route path="/account" component={App}>
-            <IndexRoute component={Home} />
-            <Route path="/account/settings" component={Settings} />
-            <Route path="/account/games" component={Games} />
-        </Route>
-        <Route path="*" component={NotFound} />
-    </Router>
-);
-
+    const Routes = (
+        <Router history={browserHistory}>
+            <Route path="/teacheraccount" component={App}>
+                <IndexRoute component={Home} />
+                <Route path="/teacheraccount/settings" component={Settings} />
+                <Route path="/teacheraccount/games" component={Games} />
+            </Route>
+            <Route path="*" component={NotFound} />
+        </Router>
+    );
 
 module.exports = Routes;
