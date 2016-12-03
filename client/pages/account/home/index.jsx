@@ -35,31 +35,19 @@ class SettingsPage extends React.Component {
     render() {
 
         return (
-            <section className="section-home container">
+            <section className="container">
+                <h1 className="page-header">Profile</h1>
                 <div className="row">
-                    <div className="col-sm-7">
-                        <h1 className="page-header">My account</h1>
-                        <div className="row">
-                            <div className="col-sm-6">
-                                <h3>My Score</h3>
+                    <div className="col-sm-6">
+                        <DetailsForm {...this.state.details} />
+                        <UserForm {...this.state.user} />
+                        <h3>My Score</h3>
 
-                                <small>score here...</small>
+                        <small>score here...</small>
 
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-sm-6">
-                                <h3># of Games Played</h3>
+                        <h3># of Games Played</h3>
 
-                                <small>####...</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-sm-5">
-                        <h1 className="page-header">Throttle gauge</h1>
-                        <div className="text-center">
-                            <i className="fa fa-gamepad bamf"></i>
-                        </div>
+                        <small>####...</small>
                     </div>
                 </div>
             </section>
