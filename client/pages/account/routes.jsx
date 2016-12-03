@@ -1,6 +1,6 @@
 'use strict';
 const App = require('./app.jsx');
-const Home = require('./home.jsx');
+const Home = require('./home/index.jsx');
 const NotFound = require('./not-found.jsx');
 const React = require('react');
 const ReactRouter = require('react-router');
