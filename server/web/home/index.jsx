@@ -35,10 +35,7 @@ class HomePage extends React.Component {
                             <div className="panel-body">
                                 <h3>About MathGame</h3>
                                 <p>
-                                    At vero eos et accusamus et iusto odio
-                                    dignissimos ducimus qui blanditiis
-                                    praesentium voluptatum deleniti atque
-                                    corrupti.
+                                    Click "Learn more" here if you want to know more about us and our site.
                                 </p>
                                 <a href="/about" className="btn btn-default btn-block">
                                     Learn more
@@ -51,10 +48,7 @@ class HomePage extends React.Component {
                             <div className="panel-body">
                                 <h3>Sign up</h3>
                                 <p>
-                                    At vero eos et accusamus et iusto odio
-                                    dignissimos ducimus qui blanditiis
-                                    praesentium voluptatum deleniti atque
-                                    corrupti.
+                                    Don't have an account? Not a problem. Sign up here!
                                 </p>
                                 <a href="/signup" className="btn btn-default btn-block">
                                     Learn more
@@ -65,12 +59,10 @@ class HomePage extends React.Component {
                     <div className="col-sm-4">
                         <div className="panel panel-default">
                             <div className="panel-body">
-                                <h3>Contact us</h3>
+                                <h3>Donate!</h3>
                                 <p>
-                                    At vero eos et accusamus et iusto odio
-                                    dignissimos ducimus qui blanditiis
-                                    praesentium voluptatum deleniti atque
-                                    corrupti.
+                                    Here at Group5 we are funded entirely by donations.
+                                    So please help us continue doing what we do best.
                                 </p>
                                 <a href="/contact" className="btn btn-default btn-block">
                                     Learn more

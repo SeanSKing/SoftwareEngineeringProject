@@ -12,7 +12,7 @@ const criteria = {
 
 const config = {
     $meta: 'This file configures the plot device.',
-    projectName: 'Aqua',
+    projectName: 'Math Attack',
     port: {
         web: {
             $filter: 'env',
@@ -52,18 +52,18 @@ const config = {
         port: 465,
         secure: true,
         auth: {
-            user: 'jedireza@gmail.com',
-            pass: process.env.SMTP_PASSWORD
+            user: 'group5projectcosc412@gmail.com',
+            pass: process.env.EMAIL_PW
         }
     },
     system: {
         fromAddress: {
-            name: 'Aqua',
-            address: 'jedireza@gmail.com'
+            name: 'Math Attack',
+            address: 'group5projectcosc412@gmail.com'
         },
         toAddress: {
-            name: 'Aqua',
-            address: 'jedireza@gmail.com'
+            name: 'Math Attack',
+            address: 'group5projectcosc412@gmail.com'
         }
     }
 };

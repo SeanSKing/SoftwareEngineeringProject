@@ -21,13 +21,14 @@ class AboutPage extends React.Component {
                                 </div>
                             </div>
                             <div className="media-body">
-                                <h4 className="media-heading">Leo Damon</h4>
+                                <h4 className="media-heading">MathGame</h4>
                                 <p>
-                                    Cras sit amet nibh libero, in gravida
-                                    nulla. Nulla vel metus scelerisque ante
-                                    sollicitudin commodo. Cras purus odio,
-                                    vestibulum in vulputate at, tempus viverra
-                                    turpis.
+                                    MathGame or Mathattack is a student made math website
+                                    created mainly for students to practice their basic
+                                    math skills over the summer. We offer a variety of
+                                    mini games that students can play. Our focus is to
+                                    make math feel more fun for students so they are
+                                    more motivated to learn.
                                 </p>
                             </div>
                         </div>
@@ -38,13 +39,21 @@ class AboutPage extends React.Component {
                                 </div>
                             </div>
                             <div className="media-body">
-                                <h4 className="media-heading">Mathew DiCaprio</h4>
+                                <h4 className="media-heading">Group5</h4>
                                 <p>
-                                    Cras sit amet nibh libero, in gravida
-                                    nulla. Nulla vel metus scelerisque ante
-                                    sollicitudin commodo. Cras purus odio,
-                                    vestibulum in vulputate at, tempus viverra
-                                    turpis.
+                                    Group5 is a small organization entirely made up
+                                    of students. We strive to bring our users the
+                                    best content we can possibly provide. As we
+                                    continue to learn as students we take on new
+                                    challenges in our projects to further ourselves
+                                    as well as the things we create. As students we
+                                    are not working for anybody other than
+                                    ourselves so as a result we are entirely funded
+                                    by donations. If you enjoy our site please
+                                    donate, any amount will be appreciated. If you
+                                    can't donate then please help in spreading our
+                                    name and website. Thank you for coming to
+                                    Mathgame and please enjoy your stay! :P
                                 </p>
                             </div>
                         </div>
@@ -55,23 +64,26 @@ class AboutPage extends React.Component {
                                 </div>
                             </div>
                             <div className="media-body">
-                                <h4 className="media-heading">Nick Jackson</h4>
+                                <h4 className="media-heading">The Build</h4>
                                 <p>
-                                    Cras sit amet nibh libero, in gravida
-                                    nulla. Nulla vel metus scelerisque ante
-                                    sollicitudin commodo. Cras purus odio,
-                                    vestibulum in vulputate at, tempus viverra
-                                    turpis.
+                                    We've built this using, Javascript, and HTML
+                                    for everything you see and all the behind
+                                    the scenes logic. We make use of Mongodb
+                                    as our primary database program as well as
+                                    bcrypt for securing passwords and user info.
+                                    Our games are implemented using phaser, a
+                                    Javascript friendly HTML5 game
+                                    framework.
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div className="col-sm-6 text-center">
-                        <h1 className="page-header">Prestige worldwide</h1>
+                        <h1 className="page-header">Group5</h1>
                         <p className="lead">
-                            The first name in entertainment.
+                            We are the future
                         </p>
-                        <i className="fa fa-volume-up bamf"></i>
+                        <i className="fa fa-thumbs-o-up bamf"></i>
                     </div>
                 </div>
             </Layout>

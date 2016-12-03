@@ -23,7 +23,7 @@ class ContactPage extends React.Component {
                         </p>
                         <i className="fa fa-reply-all bamf"></i>
                         <div>
-                            Subscriptions here.........
+                            Group5 Thanks you for your support!
                         </div>
                     </div>
                 </div>
