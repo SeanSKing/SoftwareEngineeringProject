@@ -90,7 +90,7 @@ class DetailsForm extends React.Component {
                         onChange={LinkState.bind(this)}
                         hasError={this.props.hasError['name.first']}
                         help={this.props.help['name.first']}
-                        disabled={this.props.loading}
+                        disabled={true}
                     />
                 </fieldset>
             </form>

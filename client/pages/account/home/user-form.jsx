@@ -90,7 +90,7 @@ class UserForm extends React.Component {
                         onChange={LinkState.bind(this)}
                         hasError={this.props.hasError.username}
                         help={this.props.help.username}
-                        disabled={this.props.loading}
+                        disabled={true}
                     />
                     <TextControl
                         name="email"
@@ -99,7 +99,7 @@ class UserForm extends React.Component {
                         onChange={LinkState.bind(this)}
                         hasError={this.props.hasError.email}
                         help={this.props.help.email}
-                        disabled={this.props.loading}
+                        disabled={true}
                     />
                 </fieldset>
             </form>
