@@ -1,16 +1,17 @@
 'use strict';
-//const Config = require('~config');
+
 const ApiActions = require('../../actions/api');
 const Constants = require('./constants');
 const Store = require('./store');
-const paypal =  require('paypal-rest-sdk');
 
+//payment code is commented out 
+//const paypal =  require('paypal-rest-sdk');
+//const Config = require('~config');
 //paypal.configure(Config.get('paypal'));
-
 //will be used for redirect url
-var url = '';
+//var url = '';
 
-//json with payment information
+/*json with payment information
 var create_payment_json = {
     "intent": "sale",
     "payer": {
@@ -53,7 +54,7 @@ paypal.payment.create(create_payment_json, function (error, payment) {
     }
 });
 
-
+*/
 
 class Actions {
     static sendMessage(data) {
@@ -64,7 +65,7 @@ class Actions {
            Store,
            Constants.SEND_MESSAGE,
            Constants.SEND_MESSAGE_RESPONSE, );
-          window.location=url;//redirect after message is sent 
+         // window.location=url;//redirect after message is sent 
     
     }
 
