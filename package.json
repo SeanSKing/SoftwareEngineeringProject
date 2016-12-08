@@ -45,7 +45,8 @@
     "slug": "0.9.x",
     "vision": "4.x.x",
     "visionary": "6.x.x",
-    "paypal-rest-sdk": "^1.7.0"
+    "paypal-rest-sdk": "^1.7.0",
+    "buffer-crc32": "0.2.13"
   },
   "devDependencies": {
     "babel-core": "6.x.x",

@@ -56,13 +56,6 @@ const config = {
             pass: process.env.EMAIL_PW
         }
     },
-    paypal:{
-    mode: 'sandbox',
-    client_id: process.env.PAYPAL_ID,
-    client_secret: process.env.PAYPAL_SECRET
-
-
-    },
     system: {
         fromAddress: {
             name: 'Math Attack',
