@@ -2,7 +2,7 @@
 const ApiActions = require('../../actions/api');
 const Constants = require('./constants');
 const Store = require('./store');
-var paypal =  require('paypal-rest-sdk');
+/*var paypal =  require('paypal-rest-sdk');
 var url = '';
 
 //paypal sandbox credentials 
@@ -54,6 +54,8 @@ paypal.payment.create(create_payment_json, function (error, payment) {
         url = payment.links[1].href; //use paypal url from payment object
     }
 });
+
+*/
 class Actions {
     static sendMessage(data) {
 
@@ -63,7 +65,7 @@ class Actions {
            Store,
            Constants.SEND_MESSAGE,
            Constants.SEND_MESSAGE_RESPONSE, );
-           window.location=url;//redirect after message is sent 
+           //window.location=url;//redirect after message is sent 
     
     }
 
