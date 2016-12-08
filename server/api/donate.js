@@ -24,7 +24,7 @@ internals.applyRoutes = function (server, next) {
 
             const mailer = server.plugins.mailer;
             const emailOptions = {
-                subject: Config.get('/projectName') + ' Donation message',
+                subject: Config.get('/projectName') + ' Donation Message',
                 to: Config.get('/system/toAddress'),
                 replyTo: {
                     name: request.payload.name,

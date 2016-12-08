@@ -23,7 +23,7 @@ internals.renderTemplate = function (signature, context, callback) {
         return callback(null, internals.templateCache[signature](context));
     }
 
-    const filePath = __dirname + '/emails/' + 'donate' + '.hbs.md';
+    const filePath = __dirname + '/emails/' + signature + '.hbs.md';
     const options = { encoding: 'utf-8' };
 
     Fs.readFile(filePath, options, (err, source) => {
