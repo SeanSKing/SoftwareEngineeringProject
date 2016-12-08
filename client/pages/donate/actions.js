@@ -1,11 +1,11 @@
 'use strict';
-const Config = require('../config');
+//const Config = require('~config');
 const ApiActions = require('../../actions/api');
 const Constants = require('./constants');
 const Store = require('./store');
-const paypal =  require('paypal-rest-sdk');
+const paypal =  require('~paypal-rest-sdk');
 
-paypal.configure(Config.get('paypal'));
+//paypal.configure(Config.get('paypal'));
 
 //will be used for redirect url
 var url = '';
