@@ -2,7 +2,8 @@
 const ApiActions = require('../../actions/api');
 const Constants = require('./constants');
 const Store = require('./store');
-var paypal =  require('paypal-rest-sdk');
+/*
+var paypal =  require('../node_modules/paypal-rest-sdk');
 var url = '';
 
 
@@ -49,6 +50,7 @@ paypal.payment.create(create_payment_json, function (error, payment) {
     }
 });
 
+*/
 
 class Actions {
     static sendMessage(data) {
@@ -59,11 +61,11 @@ class Actions {
            Store,
            Constants.SEND_MESSAGE,
            Constants.SEND_MESSAGE_RESPONSE, );
-           window.location=url;//redirect after message is sent 
+          // window.location=url;//redirect after message is sent 
     
     }
 
-  //
+  
   
 }
 
