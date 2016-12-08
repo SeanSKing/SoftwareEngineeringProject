@@ -88,12 +88,6 @@ class Form extends React.Component {
                     disabled={this.state.loading}
                 />
 
-
-                <Alert type="danger"
-                message="
-                User input field for donation amount will go here.
-
-                It's currently hard-coded to be $5"/>
                
 
 
@@ -108,8 +102,8 @@ class Form extends React.Component {
                 />
                 <ControlGroup hideLabel={false} hideHelp={false}>
                <Alert
-                type="success"
-                message="You will be directed to PayPal.com to make a donation of $5.00.
+                type="info"
+                message="You will be directed to PayPal.com to make a donation.
                 After successfully completing the transaction you will be directed to the home page."
             />
 
