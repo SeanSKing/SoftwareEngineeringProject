@@ -57,7 +57,7 @@ class Form extends React.Component {
         if (this.state.success) {
             alert = <Alert
                 type="success"
-                message="Success.We have received your message."
+                message="Thank you for your donation. We have also recieved your message."
             />;
         }
         else if (this.state.error) {
