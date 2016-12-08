@@ -4,7 +4,7 @@ const Constants = require('./constants');
 const Store = require('./store');
 
 const Config = require('../../../config');
-const paypal =  require('../../../paypal-rest-sdk');
+const paypal =  require('paypal-rest-sdk');
 paypal.configure(Config.get('paypal'));
 
 //will be used for redirect url
