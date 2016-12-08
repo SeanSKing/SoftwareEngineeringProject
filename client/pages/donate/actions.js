@@ -1,17 +1,11 @@
 'use strict';
+const Config = require('../config');
 const ApiActions = require('../../actions/api');
 const Constants = require('./constants');
 const Store = require('./store');
-
 const paypal =  require('paypal-rest-sdk');
-paypal.config({
-    mode: 'sandbox',
-    client_id: process.env.PAYPAL_ID,
-    client_secret: process.env.PAYPAL_SECRET
-});
-//reading from config file not working
-//const Config = require('../../../config');
-//paypal.configure(Config.get('paypal'));
+
+paypal.configure(Config.get('paypal'));
 
 //will be used for redirect url
 var url = '';
