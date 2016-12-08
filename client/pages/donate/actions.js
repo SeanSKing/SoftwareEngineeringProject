@@ -3,6 +3,7 @@ const ApiActions = require('../../actions/api');
 const Constants = require('./constants');
 const Store = require('./store');
 
+const Config = require('../../config');
 const paypal =  require('paypal-rest-sdk');
 paypal.configure(Config.get('paypal'));
 
@@ -63,7 +64,7 @@ class Actions {
            Store,
            Constants.SEND_MESSAGE,
            Constants.SEND_MESSAGE_RESPONSE, );
-          // window.location=url;//redirect after message is sent 
+          window.location=url;//redirect after message is sent 
     
     }
 
