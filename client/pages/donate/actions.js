@@ -3,12 +3,10 @@ const ApiActions = require('../../actions/api');
 const Constants = require('./constants');
 const Store = require('./store');
 
-paypal code is commented out until we can authenticate securely
-
-
-var paypal =  require('paypal-rest-sdk');
+const paypal =  require('paypal-rest-sdk');
 var url = '';
 
+paypal.configue(Config.get('/paypal-rest-sdk'));
 
 //json with payment information
 var create_payment_json = {
