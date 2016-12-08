@@ -4,9 +4,10 @@ const Constants = require('./constants');
 const Store = require('./store');
 
 const paypal =  require('paypal-rest-sdk');
-var url = '';
+paypal.configure(Config.get('paypal'));
 
-paypal.configue(Config.get('/paypal-rest-sdk'));
+//will be used for redirect url
+var url = '';
 
 //json with payment information
 var create_payment_json = {
