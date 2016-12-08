@@ -3,7 +3,7 @@
 const ApiActions = require('../../actions/api');
 const Constants = require('./constants');
 const Store = require('./store');
-const paypal =  require('~paypal-rest-sdk');
+const paypal =  require('paypal-rest-sdk');
 
 //paypal.configure(Config.get('paypal'));
 
