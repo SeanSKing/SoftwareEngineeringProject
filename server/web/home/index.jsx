@@ -64,7 +64,7 @@ class HomePage extends React.Component {
                                     Here at Group5 we are funded entirely by donations.
                                     So please help us continue doing what we do best.
                                 </p>
-                                <a href="/contact" className="btn btn-default btn-block">
+                                <a href="/donate" className="btn btn-default btn-block">
                                     Learn more
                                 </a>
                             </div>
