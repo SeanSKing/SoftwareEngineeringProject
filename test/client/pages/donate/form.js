@@ -1,24 +1,24 @@
 'use strict';
 const Code = require('code');
-const Constants = require('../../../../client/pages/contact/constants');
+const Constants = require('../../../../client/pages/donate/constants');
 const Lab = require('lab');
 const Proxyquire = require('proxyquire');
 const React = require('react');
 const ReactDOM = require('react-dom');
 const ReactTestUtils = require('react-addons-test-utils');
-const Store = require('../../../../client/pages/contact/store');
+const Store = require('../../../../client/pages/donate/store');
 
 
 const lab = exports.lab = Lab.script();
 const stub = {
     Actions: {}
 };
-const Form = Proxyquire('../../../../client/pages/contact/form.jsx', {
+const Form = Proxyquire('../../../../client/pages/donate/form.jsx', {
     './actions': stub.Actions
 });
 
 
-lab.experiment('Contact Form', () => {
+lab.experiment('Donation Form', () => {
 
     lab.test('it renders', (done) => {
 

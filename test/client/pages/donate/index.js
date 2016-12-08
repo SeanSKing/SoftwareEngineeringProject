@@ -1,5 +1,5 @@
 'use strict';
-const App = require('../../../../client/pages/contact/index.jsx');
+const App = require('../../../../client/pages/donate/index.jsx');
 const Code = require('code');
 const Lab = require('lab');
 const ReactDOM = require('react-dom');
@@ -29,7 +29,7 @@ lab.after((done) => {
 });
 
 
-lab.experiment('Contact App', () => {
+lab.experiment('donate App', () => {
 
     lab.test('it renders', (done) => {
 

@@ -14,12 +14,12 @@ const stub = {
         }
     }
 };
-const Actions = Proxyquire('../../../../client/pages/contact/actions', {
+const Actions = Proxyquire('../../../../client/pages/donate/actions', {
     '../../actions/api': stub.ApiActions
 });
 
 
-lab.experiment('Contact Actions', () => {
+lab.experiment('Donate Actions', () => {
 
     lab.test('it calls ApiActions.post from sendMessage', (done) => {
 
