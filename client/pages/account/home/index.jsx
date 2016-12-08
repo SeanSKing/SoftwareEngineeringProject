@@ -4,6 +4,7 @@ const Actions = require('./actions');
 const React = require('react');
 const Store = require('./store');
 const UserForm = require('./user-form.jsx');
+const TextControl = require('../../../components/form/text-control.jsx');
 
 
 class SettingsPage extends React.Component {
@@ -41,16 +42,27 @@ class SettingsPage extends React.Component {
                     <div className="col-sm-6">
                         <DetailsForm {...this.state.details} />
                         <UserForm {...this.state.user} />
-                        <h3>My Score</h3>
+                        <TextControl
+                            name="score"
+                            label="My Score"
+                            disabled={true}
+                        />
+                        <TextControl
+                            name="numberOfGames"
+                            label="# of Games"
+                            disabled={true}
+                        />
+                    </div>
+                    <div className="col-sm-6">
+                        <div className="text-center"> 
+                            <i className="fa fa-gamepad bamf"></i> 
+                        </div>
 
-                        <small>score here...</small>
-
-                        <h3># of Games Played</h3>
-
-                        <small>####...</small>
                     </div>
                 </div>
             </section>
+
+
         );
     }
 }
