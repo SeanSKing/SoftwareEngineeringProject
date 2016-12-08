@@ -17,13 +17,13 @@ class DonatePage extends React.Component {
                 <div className="row">
                     <div className="col-sm-6" id="app-mount"></div>
                     <div className="col-sm-6 text-center">
-                        <h1 className="page-header">Subsriptions here</h1>
+                        <h1 className="page-header">Subscriptions here</h1>
                         <p className="lead">
                             Your donation is greatly appreciated.
                         </p>
-                        <i className="fa fa-reply-all bamf"></i>
+                        <i className="fa fa-cc-paypal"></i>
                         <div>
-                            Group5 Thanks you for your support!
+                            Group5 Thanks you for your support! Subscriptions coming soon
                         </div>
                     </div>
                 </div>

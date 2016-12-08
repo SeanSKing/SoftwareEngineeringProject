@@ -17,7 +17,7 @@ class AboutPage extends React.Component {
                         <div className="media">
                             <div className="pull-left">
                                 <div className="media-object">
-                                    <i className="fa fa-camera-retro fa-4x"></i>
+                                    <i className="fa fa-plus"></i>
                                 </div>
                             </div>
                             <div className="media-body">
@@ -35,7 +35,7 @@ class AboutPage extends React.Component {
                         <div className="media text-right">
                             <div className="pull-right">
                                 <div className="media-object">
-                                    <i className="fa fa-camera-retro fa-4x"></i>
+                                    <i className="fa fa-gamepad"></i>
                                 </div>
                             </div>
                             <div className="media-body">
@@ -83,7 +83,7 @@ class AboutPage extends React.Component {
                         <p className="lead">
                             We are the future
                         </p>
-                        <i className="fa fa-thumbs-o-up bamf"></i>
+                        <i className="fa fa-gamepad"></i>
                     </div>
                 </div>
             </Layout>
