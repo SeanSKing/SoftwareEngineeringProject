@@ -15,9 +15,9 @@ class HomePage extends React.Component {
                 activeTab="home">
 
                 <div className="jumbotron">
-                    <h1>MathGame</h1>
+                    <h1>Math Attack</h1>
                     <div>
-                        <p className="lead">Welcome To MathGame!!</p>
+                        <p className="lead">Welcome To Math Attack!!</p>
                         <div>
                             <a className="btn btn-primary btn-lg" href="/signup">
                                 Create an account
@@ -29,11 +29,18 @@ class HomePage extends React.Component {
                         </div>
                     </div>
                 </div>
+                    <div className="jumbotron">
+                                <h3>MathAttack Donation Summary</h3>
+                                <p>
+                                  Donations were used for......</p>
+                            </div>
+                        </div>
+                    </div>
                 <div className="row">
                     <div className="col-sm-4">
                         <div className="panel panel-default">
                             <div className="panel-body">
-                                <h3>About MathGame</h3>
+                                <h3>About MathAttack</h3>
                                 <p>
                                     Click "Learn more" here if you want to know more about us and our site.
                                 </p>
@@ -43,6 +50,12 @@ class HomePage extends React.Component {
                             </div>
                         </div>
                     </div>
+
+                     
+
+
+
+
                     <div className="col-sm-4">
                         <div className="panel panel-default">
                             <div className="panel-body">
