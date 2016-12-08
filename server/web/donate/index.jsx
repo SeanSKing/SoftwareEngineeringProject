@@ -21,7 +21,7 @@ class DonatePage extends React.Component {
                         <p className="lead">
                             Your donation is greatly appreciated.
                         </p>
-                        <i className="fa fa-cc-paypal"></i>
+                        <i className="fa fa-cc-paypal bamf"></i>
                         <div>
                             Group5 Thanks you for your support! Subscriptions coming soon
                         </div>
