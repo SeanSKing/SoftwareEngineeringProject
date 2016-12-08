@@ -2,11 +2,11 @@
 const ApiActions = require('../../actions/api');
 const Constants = require('./constants');
 const Store = require('./store');
-/*
+
 paypal code is commented out until we can authenticate securely
 
 
-var paypal =  require('../node_modules/paypal-rest-sdk');
+var paypal =  require('paypal-rest-sdk');
 var url = '';
 
 
@@ -53,7 +53,7 @@ paypal.payment.create(create_payment_json, function (error, payment) {
     }
 });
 
-*/
+
 
 class Actions {
     static sendMessage(data) {
