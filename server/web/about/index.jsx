@@ -35,7 +35,7 @@ class AboutPage extends React.Component {
                         <div className="media text-right">
                             <div className="pull-right">
                                 <div className="media-object">
-                                    <i className="fa fa-gamepad fa-10px"></i>
+                                    <i className="fa fa-gamepad fa-4px"></i>
                                 </div>
                             </div>
                             <div className="media-body">
