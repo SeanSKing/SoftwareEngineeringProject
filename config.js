@@ -58,8 +58,8 @@ const config = {
     },
     paypal:{
     mode: 'sandbox',
-    client_id: 'id',
-    client_secret: 'pw'
+    client_id: process.env.PAYPAL_ID,
+    client_secret: process.env.PAYPAL_SECRET
 
 
     },
