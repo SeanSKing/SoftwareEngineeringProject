@@ -20,7 +20,7 @@ var create_payment_json = {
     },
     "redirect_urls": {
         "return_url": "http://mathattack.herokuapp.com/", //need to create a thank you page
-        "cancel_url": "http://mathattack.herokuapp.com/contact" // back to donation page if it fails
+        "cancel_url": "http://mathattack.herokuapp.com/donate" // back to donation page if it fails
     },
     "transactions": [{
         "item_list": {
@@ -58,7 +58,7 @@ class Actions {
     static sendMessage(data) {
 
         ApiActions.post(
-          '/api/contact',
+          '/api/donate',
            data,
            Store,
            Constants.SEND_MESSAGE,

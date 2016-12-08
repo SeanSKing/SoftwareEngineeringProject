@@ -3,16 +3,16 @@ const Layout = require('../layouts/default.jsx');
 const React = require('react');
 
 
-class ContactPage extends React.Component {
+class DonatePage extends React.Component {
     render() {
 
-        const feet = <script src="/public/pages/contact.min.js"></script>;
+        const feet = <script src="/public/pages/donate.min.js"></script>;
 
         return (
             <Layout
                 title="Donate"
                 feet={feet}
-                activeTab="contact">
+                activeTab="donate">
 
                 <div className="row">
                     <div className="col-sm-6" id="app-mount"></div>
@@ -33,4 +33,4 @@ class ContactPage extends React.Component {
 }
 
 
-module.exports = ContactPage;
+module.exports = DonatePage;
