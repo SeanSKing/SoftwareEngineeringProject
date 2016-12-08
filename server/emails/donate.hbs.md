@@ -1,4 +1,4 @@
-### Contact Form
+### Donation Message
 
 | Field    | Value       |
 | --------:|:----------- |

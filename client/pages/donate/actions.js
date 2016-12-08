@@ -1,16 +1,14 @@
 'use strict';
+//const Config = require('~config');
 const ApiActions = require('../../actions/api');
 const Constants = require('./constants');
 const Store = require('./store');
-var paypal =  require('paypal-rest-sdk');
-var url = '';
+const paypal =  require('paypal-rest-sdk');
 
-//paypal sandbox credentials 
-paypal.configure({
-  'mode': 'sandbox',
-  'client_id':process.env.PAYPAL_ID,
-  'client_secret':process.env.PAYPAL_SECRET
-});
+//paypal.configure(Config.get('paypal'));
+
+//will be used for redirect url
+var url = '';
 
 //json with payment information
 var create_payment_json = {
@@ -20,7 +18,7 @@ var create_payment_json = {
     },
     "redirect_urls": {
         "return_url": "http://mathattack.herokuapp.com/", //need to create a thank you page
-        "cancel_url": "http://mathattack.herokuapp.com/contact" // back to donation page if it fails
+        "cancel_url": "http://mathattack.herokuapp.com/donate" // back to donation page if it fails
     },
     "transactions": [{
         "item_list": {
@@ -54,20 +52,23 @@ paypal.payment.create(create_payment_json, function (error, payment) {
         url = payment.links[1].href; //use paypal url from payment object
     }
 });
+
+
+
 class Actions {
     static sendMessage(data) {
 
         ApiActions.post(
-          '/api/contact',
+          '/api/donate',
            data,
            Store,
            Constants.SEND_MESSAGE,
            Constants.SEND_MESSAGE_RESPONSE, );
-           window.location=url;//redirect after message is sent 
+          window.location=url;//redirect after message is sent 
     
     }
 
-  //
+  
   
 }
 

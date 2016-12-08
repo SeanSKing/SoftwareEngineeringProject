@@ -40,7 +40,7 @@ Gulp.task('webpack', (callback) => {
             account: './client/pages/account/index',
             teacheraccount: './client/pages/teacheraccount/index',
             admin: './client/pages/admin/index',
-            contact: './client/pages/contact/index',
+            donate: './client/pages/donate/index',
             login: './client/pages/login/index',
             signup: './client/pages/signup/index'
         },
