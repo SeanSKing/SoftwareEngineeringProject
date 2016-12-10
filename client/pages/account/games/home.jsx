@@ -49,8 +49,8 @@ class HomePage extends React.Component {
                         <h1 className="page-header">Sample Game</h1>
                         <div className="row">
                             <div className="col-sm-6">
-                             <iframe src="https://www.google.com/" target="_parent" width="800" height="600"></iframe>
-                            </div>
+                            <a href="./Game/index.html">link to game</a>
+                             </div>
                         </div>
                     </div>
                 </div>
