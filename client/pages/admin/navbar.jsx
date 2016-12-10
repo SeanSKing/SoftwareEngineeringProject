@@ -53,7 +53,7 @@ class Navbar extends React.Component {
                                 className="navbar-logo"
                                 src="/public/media/logo-square-inverse.png"
                             />
-                            <span className="navbar-brand-label">MathGame</span>
+                            <span className="navbar-brand-label">MathAttack</span>
                         </Link>
                         <button
                             className="navbar-toggle collapsed"
