@@ -49,7 +49,7 @@ class HomePage extends React.Component {
                         <h1 className="page-header">Sample Game</h1>
                         <div className="row">
                             <div className="col-sm-6">
-                             <iframe src="./Game/index.html" width="800" height="600"></iframe>
+                             <iframe src="./Game/" width="800" height="600"></iframe>
                             </div>
                         </div>
                     </div>
