@@ -46,10 +46,10 @@ class HomePage extends React.Component {
             <section className="section-home container">
                 <div className="row">
                     <div className="col-sm-7">
-                        <h1 className="page-header">Insert the game here!!</h1>
+                        <h1 className="page-header">Sample Game</h1>
                         <div className="row">
                             <div className="col-sm-6">
-
+                            <iframe src="./Game/index.html"></iframe>
                             </div>
                         </div>
                     </div>
