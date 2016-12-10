@@ -6,6 +6,7 @@ const React = require('react');
 const ReactRouter = require('react-router');
 const Settings = require('./settings/index.jsx');
 const Games = require('./games/home.jsx');
+const game1 = require('./games/Game/index.html');
 const IndexRoute = ReactRouter.IndexRoute;
 const Route = ReactRouter.Route;
 const Router = ReactRouter.Router;
@@ -17,6 +18,7 @@ const browserHistory = ReactRouter.browserHistory;
                 <IndexRoute component={Home} />
                 <Route path="/account/settings" component={Settings} />
                 <Route path="/account/games" component={Games} />
+                <Route path="/account/games/Game" component={game1} />
             </Route>
             <Route path="*" component={NotFound} />
         </Router>
