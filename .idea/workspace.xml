@@ -46,7 +46,7 @@
       <file leaf-file-name="index.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/pages/account/home/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
+            <state relative-caret-position="322">
               <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
               <folding />
             </state>
@@ -110,8 +110,8 @@
         <option value="$PROJECT_DIR$/app/public/css/style.styl" />
         <option value="$PROJECT_DIR$/client/pages/account/settings/index.jsx" />
         <option value="$PROJECT_DIR$/client/pages/account/home.jsx" />
-        <option value="$PROJECT_DIR$/client/pages/account/home/index.jsx" />
         <option value="$PROJECT_DIR$/client/pages/account/home/score-form.jsx" />
+        <option value="$PROJECT_DIR$/client/pages/account/home/index.jsx" />
       </list>
     </option>
   </component>
@@ -695,7 +695,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23917000" />
+    <option name="totallyTimeSpent" value="24975000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="36" y="23" width="1244" height="716" extended-state="0" />
@@ -883,6 +883,7 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/account/home/score-form.jsx" />
     <entry file="file://$PROJECT_DIR$/client/pages/account/home/details-form.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -899,17 +900,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/account/home/score-form.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="77" column="29" selection-start-line="77" selection-start-column="29" selection-end-line="77" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/pages/account/home/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
+        <state relative-caret-position="322">
           <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
           <folding />
         </state>
