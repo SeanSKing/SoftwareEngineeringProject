@@ -8,8 +8,8 @@ var url = '';
 //paypal sandbox credentials 
 paypal.configure({
   'mode': 'sandbox',
-  'client_id':process.env.PAYPAL_ID,
-  'client_secret':process.env.PAYPAL_SECRET
+  'client_id':'AfUf2NOZQV9wyGg071zmr96xfYt3KEBjTDCZ8J-H5XowcsTyJchoXuJeEVCdN8kK7O0UTHF6U9IzzfQK',
+  'client_secret':'EKk3gdn91Uoz5-PHV5jXE0twMDQ5FJYeAqsZySTnnNPMbqCNUED8vLHMDEebmKi4lDRWCdpMZ_vCzvgv'
 });
 
 //json with payment information

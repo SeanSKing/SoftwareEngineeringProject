@@ -5,10 +5,10 @@ exports.register = function (server, options, next) {
 
     server.route({
         method: 'GET',
-        path: '/contact',
+        path: '/donate',
         handler: function (request, reply) {
 
-            reply.view('contact/index');
+            reply.view('donate/index');
         }
     });
 
@@ -18,5 +18,5 @@ exports.register = function (server, options, next) {
 
 
 exports.register.attributes = {
-    name: 'web/contact'
+    name: 'web/donate'
 };
