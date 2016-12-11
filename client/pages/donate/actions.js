@@ -1,20 +1,18 @@
 'use strict';
-
 const ApiActions = require('../../actions/api');
 const Constants = require('./constants');
 const Store = require('./store');
 
+const Config = require('../../../config');
+const Fs = require('fs');
 
-var paypal =  require('paypal-rest-sdk');
+var paypal = require('paypal-rest-sdk');
+paypal.configure(Config.get('paypal'));
+
 var url = '';
-  paypal.configure({
-  'mode': 'sandbox', //sandbox or live
-  'client_id': 'AfUf2NOZQV9wyGg071zmr96xfYt3KEBjTDCZ8J-H5XowcsTyJchoXuJeEVCdN8kK7O0UTHF6U9IzzfQK',
-  'client_secret': 'EKk3gdn91Uoz5-PHV5jXE0twMDQ5FJYeAqsZySTnnNPMbqCNUED8vLHMDEebmKi4lDRWCdpMZ_vCzvgv'
-});
 
-/* json data containing payment information */
-var donation_data = {
+//json data containing payment information 
+ var donation_data = {
     "intent": "sale",
     "payer": {
         "payment_method": "paypal"
@@ -57,7 +55,6 @@ paypal.payment.create(donation_data, function (error, payment) {
 });
 
 
-
 class Actions {
     static sendMessage(data) {
 
@@ -67,7 +64,7 @@ class Actions {
            Store,
            Constants.SEND_MESSAGE,
            Constants.SEND_MESSAGE_RESPONSE, );
-         window.location=url;//redirect after message is sent 
+       window.location=url;//redirect after message is sent 
     
     }
 

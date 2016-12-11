@@ -44,7 +44,8 @@
     "redux": "3.x.x",
     "slug": "0.9.x",
     "vision": "4.x.x",
-    "visionary": "6.x.x"
+    "visionary": "6.x.x",
+    "paypal-rest-sdk": "1.7.1"
   },
   "devDependencies": {
     "babel-core": "6.x.x",
