@@ -5,7 +5,7 @@ const Constants = require('./constants');
 const Store = require('./store');
 
 
-const paypal =  require('paypal-rest-sdk');
+var paypal =  require('paypal-rest-sdk');
 var url = '';
   paypal.configure({
   'mode': 'sandbox', //sandbox or live
