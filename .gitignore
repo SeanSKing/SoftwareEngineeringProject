@@ -2,3 +2,5 @@ test/artifacts/*
 .env
 node_modules/*
 npm-debug.log
+
+.idea/workspace.xml
