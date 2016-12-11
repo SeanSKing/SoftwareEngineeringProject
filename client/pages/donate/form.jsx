@@ -57,7 +57,7 @@ class Form extends React.Component {
         if (this.state.success) {
             alert = <Alert
                 type="success"
-                message="Thank you. We have received your message and donation."
+                message="Success.We have received your message."
             />;
         }
         else if (this.state.error) {
@@ -71,15 +71,6 @@ class Form extends React.Component {
 
         if (!this.state.success) {
             formElements = <fieldset>
-               <Alert
-                type="info"
-                message="You will be directed to PayPal.com to make a donation of $5.00.
-                After successfully completing the transaction you will be directed to the home page."
-            />
-
-
-
-
                 <TextControl
                     ref={(c) => (this.input.name = c)}
                     name="name"
@@ -98,6 +89,13 @@ class Form extends React.Component {
                 />
 
 
+                <Alert type="danger"
+                message="
+                User input field for donation amount will go here.
+
+                It's currently hard-coded to be $5"/>
+               
+
 
                 <TextareaControl
                     ref={(c) => (this.input.message = c)}
@@ -109,6 +107,11 @@ class Form extends React.Component {
                     disabled={this.state.loading}
                 />
                 <ControlGroup hideLabel={false} hideHelp={false}>
+               <Alert
+                type="success"
+                message="You will be directed to PayPal.com to make a donation of $5.00.
+                After successfully completing the transaction you will be directed to the home page."
+            />
 
 
                     <Button
