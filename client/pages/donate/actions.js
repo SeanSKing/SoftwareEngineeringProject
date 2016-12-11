@@ -1,17 +1,18 @@
 'use strict';
-
 const ApiActions = require('../../actions/api');
 const Constants = require('./constants');
 const Store = require('./store');
+var paypal =  require('paypal-rest-sdk');
+var url = '';
 
-//payment code is commented out 
-//const paypal =  require('paypal-rest-sdk');
-//const Config = require('~config');
-//paypal.configure(Config.get('paypal'));
-//will be used for redirect url
-//var url = '';
+//paypal sandbox credentials 
+paypal.configure({
+  'mode': 'sandbox',
+  'client_id':'AfUf2NOZQV9wyGg071zmr96xfYt3KEBjTDCZ8J-H5XowcsTyJchoXuJeEVCdN8kK7O0UTHF6U9IzzfQK',
+  'client_secret':'EKk3gdn91Uoz5-PHV5jXE0twMDQ5FJYeAqsZySTnnNPMbqCNUED8vLHMDEebmKi4lDRWCdpMZ_vCzvgv'
+});
 
-/*json with payment information
+//json with payment information
 var create_payment_json = {
     "intent": "sale",
     "payer": {
@@ -19,7 +20,7 @@ var create_payment_json = {
     },
     "redirect_urls": {
         "return_url": "http://mathattack.herokuapp.com/", //need to create a thank you page
-        "cancel_url": "http://mathattack.herokuapp.com/donate" // back to donation page if it fails
+        "cancel_url": "http://mathattack.herokuapp.com/contact" // back to donation page if it fails
     },
     "transactions": [{
         "item_list": {
@@ -53,23 +54,20 @@ paypal.payment.create(create_payment_json, function (error, payment) {
         url = payment.links[1].href; //use paypal url from payment object
     }
 });
-
-*/
-
 class Actions {
     static sendMessage(data) {
 
         ApiActions.post(
-          '/api/donate',
+          '/api/contact',
            data,
            Store,
            Constants.SEND_MESSAGE,
            Constants.SEND_MESSAGE_RESPONSE, );
-         // window.location=url;//redirect after message is sent 
+           window.location=url;//redirect after message is sent 
     
     }
 
-  
+  //
   
 }
 
