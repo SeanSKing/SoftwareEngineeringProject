@@ -4,15 +4,17 @@ const ApiActions = require('../../actions/api');
 const Constants = require('./constants');
 const Store = require('./store');
 
-//payment code is commented out 
-//const paypal =  require('paypal-rest-sdk');
-//const Config = require('~config');
-//paypal.configure(Config.get('paypal'));
-//will be used for redirect url
-//var url = '';
 
-/*json with payment information
-var create_payment_json = {
+const paypal =  require('paypal-rest-sdk');
+var url = '';
+  paypal.configure({
+  'mode': 'sandbox', //sandbox or live
+  'client_id': 'AfUf2NOZQV9wyGg071zmr96xfYt3KEBjTDCZ8J-H5XowcsTyJchoXuJeEVCdN8kK7O0UTHF6U9IzzfQK',
+  'client_secret': 'EKk3gdn91Uoz5-PHV5jXE0twMDQ5FJYeAqsZySTnnNPMbqCNUED8vLHMDEebmKi4lDRWCdpMZ_vCzvgv'
+});
+
+/* json data containing payment information */
+var donation_data = {
     "intent": "sale",
     "payer": {
         "payment_method": "paypal"
@@ -39,7 +41,7 @@ var create_payment_json = {
     }]
 };
 
-paypal.payment.create(create_payment_json, function (error, payment) {
+paypal.payment.create(donation_data, function (error, payment) {
     if (error) {
         throw error;
     } else {
@@ -54,7 +56,7 @@ paypal.payment.create(create_payment_json, function (error, payment) {
     }
 });
 
-*/
+
 
 class Actions {
     static sendMessage(data) {
@@ -65,7 +67,7 @@ class Actions {
            Store,
            Constants.SEND_MESSAGE,
            Constants.SEND_MESSAGE_RESPONSE, );
-         // window.location=url;//redirect after message is sent 
+         window.location=url;//redirect after message is sent 
     
     }
 
