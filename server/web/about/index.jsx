@@ -21,7 +21,7 @@ class AboutPage extends React.Component {
                                 </div>
                             </div>
                             <div className="media-body">
-                                <h4 className="media-heading">MathGame</h4>
+                                <h4 className="media-heading">MathAttack</h4>
                                 <p>
                                     MathGame or Mathattack is a student made math website
                                     created mainly for students to practice their basic
