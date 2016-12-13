@@ -112,7 +112,7 @@ const manifest = {
             }
         },
         {
-            plugin: './server/api/contact',
+            plugin: './server/api/donate',
             options: {
                 routes: { prefix: '/api' }
             }
@@ -169,7 +169,7 @@ const manifest = {
             plugin: './server/web/admin'
         },
         {
-            plugin: './server/web/contact'
+            plugin: './server/web/donate'
         },
         {
             plugin: './server/web/home'

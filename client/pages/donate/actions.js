@@ -8,8 +8,8 @@ var url = '';
 //paypal sandbox credentials 
 paypal.configure({
   'mode': 'sandbox',
-  'client_id':process.env.PAYPAL_ID,
-  'client_secret':process.env.PAYPAL_SECRET
+  'client_id':'AfUf2NOZQV9wyGg071zmr96xfYt3KEBjTDCZ8J-H5XowcsTyJchoXuJeEVCdN8kK7O0UTHF6U9IzzfQK',
+  'client_secret':'EKk3gdn91Uoz5-PHV5jXE0twMDQ5FJYeAqsZySTnnNPMbqCNUED8vLHMDEebmKi4lDRWCdpMZ_vCzvgv'
 });
 
 //json with payment information
@@ -20,7 +20,7 @@ var create_payment_json = {
     },
     "redirect_urls": {
         "return_url": "http://mathattack.herokuapp.com/", //need to create a thank you page
-        "cancel_url": "http://mathattack.herokuapp.com/contact" // back to donation page if it fails
+        "cancel_url": "http://mathattack.herokuapp.com/donate" // back to donation page if it fails
     },
     "transactions": [{
         "item_list": {

@@ -10,7 +10,7 @@ internals.applyRoutes = function (server, next) {
 
     server.route({
         method: 'POST',
-        path: '/contact',
+        path: '/donate',
         config: {
             validate: {
                 payload: {
@@ -24,14 +24,14 @@ internals.applyRoutes = function (server, next) {
 
             const mailer = server.plugins.mailer;
             const emailOptions = {
-                subject: Config.get('/projectName') + ' contact form',
+                subject: Config.get('/projectName') + ' donate form',
                 to: Config.get('/system/toAddress'),
                 replyTo: {
                     name: request.payload.name,
                     address: request.payload.email
                 }
             };
-            const template = 'contact';
+            const template = 'donate';
 
             mailer.sendEmail(emailOptions, template, request.payload, (err, info) => {
 
@@ -58,5 +58,5 @@ exports.register = function (server, options, next) {
 
 
 exports.register.attributes = {
-    name: 'contact'
+    name: 'donate'
 };
