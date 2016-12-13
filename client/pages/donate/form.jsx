@@ -57,7 +57,7 @@ class Form extends React.Component {
         if (this.state.success) {
             alert = <Alert
                 type="success"
-                message="Thank you for your donation. We have also recieved your message."
+                message="Success.We have received your message."
             />;
         }
         else if (this.state.error) {
@@ -88,6 +88,12 @@ class Form extends React.Component {
                     disabled={this.state.loading}
                 />
 
+
+                <Alert type="danger"
+                message="
+                User input field for donation amount will go here.
+
+                It's currently hard-coded to be $5"/>
                
 
 
@@ -102,8 +108,8 @@ class Form extends React.Component {
                 />
                 <ControlGroup hideLabel={false} hideHelp={false}>
                <Alert
-                type="info"
-                message="You will be directed to PayPal.com to make a donation.
+                type="success"
+                message="You will be directed to PayPal.com to make a donation of $5.00.
                 After successfully completing the transaction you will be directed to the home page."
             />
 
