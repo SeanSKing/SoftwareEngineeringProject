@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Math game from group 5</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-fixed-top navbar-light bg-faded">
+      <a class="navbar-brand" href="#">Math game from group 5</a>
+      
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-3">Math game, from group 5!</h1>
+        <p class="para">This is a simple math game. It helps young students to learn easy maths operations like addation, subtraction, multiplication and division</p>
+        
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+              <div class="row">
+              <div class="col-md-12">
+               <h3>Solve the Question:</h3>
+              <div style="text-align: center;" id="alert" class="alert alert-danger" role="alert">
+                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                      
+                  </div>
+
+              </div>
+              </div>
+          
+                   <form name=simpleGame>
+                     <div class="form-group">
+                     <div class="row">
+                    <div class="col-md-8">
+                      <input style="margin-bottom: 10px;" type="text" class="form-control" id="question" name="display" disabled>
+                          </div>
+
+                          <div class="col-md-4">
+                            <input type="button" class="btn btn-default" value="check answer" onClick="ans()">
+                          </div>
+
+                          </div>
+                         
+                         <div style="margin-bottom: 10px;" class="row">
+                          <input type="button" class="btn btn-primary" value="1" onclick="simpleGame.display.value+='1'">
+                          <input type="button" class="btn btn-primary" value="2" onclick="simpleGame.display.value+='2'">
+                          <input type="button" class="btn btn-primary" value="3" onclick="simpleGame.display.value+='3'">
+                          <input type="button" class="btn btn-primary" value="4" onclick="simpleGame.display.value+='4'">
+                          <input type="button" class="btn btn-primary" value="5" onclick="simpleGame.display.value+='5'">
+                          <input type="button" class="btn btn-primary" value="6" onclick="simpleGame.display.value+='6'">
+                          <input type="button" class="btn btn-primary" value="7" onclick="simpleGame.display.value+='7'">
+                          <input type="button" class="btn btn-primary" value="8" onclick="simpleGame.display.value+='8'">
+                          <input type="button" class="btn btn-primary" value="9" onclick="simpleGame.display.value+='9'">
+                          <input type="button" class="btn btn-primary" value="0" onclick="simpleGame.display.value+='0'">
+                          <input type="button" class="btn btn-primary" value="." onclick="simpleGame.display.value+='.'">
+                          <input type="button" class="btn btn-primary" value="-" onclick="simpleGame.display.value+='-'">
+                          <input type="reset" name="clear" class="btn btn-primary" value="Clear" onclick="clearForm(this.form);">
+
+                      
+                          </div>
+
+                         <div style="margin-bottom: 10px;" class="row">
+                          <input type="button" class="btn btn-primary" value="add" onClick="add()">
+                          <input type="button" class="btn btn-danger" value="subtract" onClick="subtract()">
+                          <input type="button" class="btn btn-success" value="multiply" onClick="multiply()">
+                          <input type="button" class="btn btn-default" value="divide" onClick="divide()">
+                          </div>
+
+                          <div style="margin-bottom: 10px;" class="row">
+                          <label class="custom-control custom-radio">
+                          <input class="custom-control-indicator" type="radio" name="arithmetic">Easy
+                          </label>
+
+                          <label class="custom-control custom-radio">
+                          <input class="custom-control-indicator" type="radio" name="arithmetic" checked>Moderate
+                          </label>
+
+                          <label class="custom-control custom-radio">
+                          <input class="custom-control-indicator" type="radio" name="arithmetic">Difficult
+                          </label>
+                          </div>
+                          <div style="margin-bottom: 10px;" class="row">
+                          <input type="button" class="btn btn-success" value="Check Score" onClick="check()">
+                          <input type="button" class="btn btn-success" value="Reset Score" onClick="history.go(0)">
+                          </div>
+
+                          </div>
+                   </form>
+       </div>
+        <div class="col-md-2">
+          
+        </div>
+      </div>
+
+    
+
+      
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+
+
+    <script src="js/jquery.js"></script>
+
+ <SCRIPT LANGUAGE="JavaScript">
+
+
+correct=0;
+wrong=0;
+
+
+function random(maxValue) {
+day= new Date();
+hour= day.getHours();
+min=day.getMinutes();
+sec=day.getSeconds();
+mili=day.getTime()
+return(((hour*3600)+(min*60)+(sec)+mili) % maxValue);
+}
+function ranom(maxValue) {
+day= new Date();
+mil=day.getTime();
+return((mil) % maxValue);
+}
+
+//function used for adding numbers
+function add() {
+if(document.simpleGame.arithmetic[0].checked)
+maxValue=10;
+else {
+if(document.simpleGame.arithmetic[1].checked)
+maxValue=30;
+else {
+maxValue=60;
+   }
+}
+numA=random(maxValue);
+numB=ranom(maxValue);
+numC=numA + numB;
+//Answer=window.prompt(  numA + "+"  + numB +  " = ", "");
+document.getElementById('alert').innerHTML = numA + "+"  + numB +  " = ", "" ;
+Answer=document.getElementById('question');
+//ans();
+}
+
+//function used for subctracting
+function subtract() {
+if(document.simpleGame.arithmetic[0].checked)
+maxValue=10;
+else
+{if(document.simpleGame.arithmetic[1].checked)
+maxValue=30;
+else {
+maxValue=60
+   }
+}
+numA=random(maxValue);
+numB=ranom(maxValue);
+numC=numA - numB;
+//Answer=window.prompt(  numA + "-"  + numB+  " = ", 0);
+document.getElementById('alert').innerHTML = numA + "-"  + numB +  " = ", "" ;
+Answer=document.getElementById('question');
+//ans()
+}
+
+//function used for dividing numbers
+function divide() {
+if(document.simpleGame.arithmetic[0].checked)
+maxValue=10;
+else {
+if(document.simpleGame.arithmetic[1].checked)
+maxValue=30;
+else {
+maxValue=60
+   }
+}
+numA=random(maxValue)+1;
+numB=ranom(maxValue)+1;
+numC=numA / numB;
+numC=Math.round(numC)
+window.alert("Please round your answer off:\n"
++".5 or higher rounds one number up\n"
++".4 or lower rounds one number down");
+//Answer=window.prompt(  numA + "/"  + numB +  " = ", 0);
+document.getElementById('alert').innerHTML = numA + "/"  + numB +  " = ", 0 ;
+Answer=document.getElementById('question');
+//ans()
+}
+
+//function used for multiplying numbers
+function multiply() {
+if(document.simpleGame.arithmetic[0].checked)
+maxValue=10;
+else {
+if(document.simpleGame.arithmetic[1].checked)
+maxValue=30;
+else {
+maxValue=60
+   }
+}
+numA=random(maxValue);
+numB=ranom(maxValue);
+numC=numA * numB;
+//Answer=window.prompt(  numA + "*"  + numB +  " = ", 0);
+document.getElementById('alert').innerHTML = numA + "*"  + numB +  " = ", "" ;
+Answer=document.getElementById('question');
+//ans();
+}
+
+
+function check() {
+if ((correct+wrong) != 0) {
+score = "" + ((correct / (correct + wrong)) * 100);
+score = score.substring(0,4) + "%";
+alert("YOUR SCORE:  " + score + "\n"
++ correct + " correct\n"
++ wrong + " incorrect")
+}
+else alert("You have not completed any exercises yet.");
+}
+
+function ans() {
+Answer=document.getElementById('question');  
+if (Answer.value == numC) {
+correct++;
+msg = "Congratulations, your answer is correct.";
+}
+else {
+wrong++;
+msg = "Oops!  " + Answer.value + " is incorrect.\n\n"
++ "The correct answer was " +numC + ".";
+   }
+score = "" + ((correct / (correct + wrong)) * 100);
+score = score.substring(0,4) + "%";
+alert(msg + "\n\nYOUR SCORE:  " + score + "\n"
++ correct + " correct\n"
++ wrong + " incorrect")
+}
+
+function was(){
+  alert("your answer is" + Answer.value);
+}
+
+
+
+
+
+</script>
+  </body>
+</html>
