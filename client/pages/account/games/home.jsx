@@ -47,8 +47,6 @@ class HomePage extends React.Component {
                 <div className="row">
                     <div className="col-sm-7">
                         <h1 className="page-header">Insert the game here!!</h1>
-                        <iframe src="Game/index.html" name="bestgameever"    width="800" height="600" frameborder="0" scrolling="no">   <p>Your browser does not support iframes.</p> ></iframe>
-
                         <div className="row">
                             <div className="col-sm-6">
 
