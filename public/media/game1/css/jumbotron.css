@@ -1,0 +1,15 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-bottom: 2rem;
+}
+
+.jumbotron{
+	margin-top: 45px;
+}
+
+.display-3,
+.btn,
+.para,
+.form-group{
+	text-align: center;
+}
