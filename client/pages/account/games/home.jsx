@@ -60,6 +60,14 @@ class HomePage extends React.Component {
 
 
 
+
+    </div> <!-- /container -->
+
+
+
+
+
+
                 <div className="row">
                     <div className="col-sm-7">
                         <h1 className="page-header">Insert the game here!!</h1>
