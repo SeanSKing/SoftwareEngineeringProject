@@ -53,17 +53,6 @@ class HomePage extends React.Component {
                   </div>
                 </div>
 
-                <div className="row">
-                    <div className="col-sm-7">
-                        <h1 className="page-header">Insert the game here!!</h1>
-                        <div className="row">
-                            <div className="col-sm-6">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="container">
       <!-- Example row of columns -->
       <div class="row">
@@ -149,6 +138,24 @@ class HomePage extends React.Component {
 
 
     </div> <!-- /container -->
+
+
+
+
+
+
+                <div className="row">
+                    <div className="col-sm-7">
+                        <h1 className="page-header">Insert the game here!!</h1>
+                        <div className="row">
+                            <div className="col-sm-6">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
 
 
             </section>
