@@ -44,13 +44,15 @@ class HomePage extends React.Component {
 
         return (
             <section className="section-home container">
-            <div class="jumbotron">
-      <div class="container">
-        <h1 class="display-3">Welcome to Math Attack!</h1>
-        <p class="para">Select the type of problem you would like to practice.</p>
 
-      </div>
-    </div>
+                <div class="jumbotron">
+                  <div class="container">
+                    <h1 class="display-3">Welcome to Math Attack!</h1>
+                    <p class="para">Select the type of problem you would like to practice.</p>
+
+                  </div>
+                </div>
+
                 <div className="row">
                     <div className="col-sm-7">
                         <h1 className="page-header">Insert the game here!!</h1>
@@ -61,6 +63,8 @@ class HomePage extends React.Component {
                         </div>
                     </div>
                 </div>
+
+
             </section>
         );
     }
