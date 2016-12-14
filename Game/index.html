@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Math Attack!</title>
+    <title>Math game from group 5</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -21,15 +21,16 @@
   <body>
 
     <nav class="navbar navbar-fixed-top navbar-light bg-faded">
-
+      <a class="navbar-brand" href="#">Math game from group 5</a>
+      
     </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1 class="display-3">Welcome to Math Attack!</h1>
-        <p class="para">Select the type of problem you would like to practice.</p>
-
+        <h1 class="display-3">Math game, from group 5!</h1>
+        <p class="para">This is a simple math game. It helps young students to learn easy maths operations like addation, subtraction, multiplication and division</p>
+        
       </div>
     </div>
 
@@ -44,12 +45,12 @@
                <h3>Solve the Question:</h3>
               <div style="text-align: center;" id="alert" class="alert alert-danger" role="alert">
                  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-
+                      
                   </div>
 
               </div>
               </div>
-
+          
                    <form name=simpleGame>
                      <div class="form-group">
                      <div class="row">
@@ -62,7 +63,7 @@
                           </div>
 
                           </div>
-
+                         
                          <div style="margin-bottom: 10px;" class="row">
                           <input type="button" class="btn btn-primary" value="1" onclick="simpleGame.display.value+='1'">
                           <input type="button" class="btn btn-primary" value="2" onclick="simpleGame.display.value+='2'">
@@ -78,7 +79,7 @@
                           <input type="button" class="btn btn-primary" value="-" onclick="simpleGame.display.value+='-'">
                           <input type="reset" name="clear" class="btn btn-primary" value="Clear" onclick="clearForm(this.form);">
 
-
+                      
                           </div>
 
                          <div style="margin-bottom: 10px;" class="row">
@@ -110,13 +111,13 @@
                    </form>
        </div>
         <div class="col-md-2">
-
+          
         </div>
       </div>
 
+    
 
-
-
+      
     </div> <!-- /container -->
 
 
@@ -247,7 +248,7 @@ else alert("You have not completed any exercises yet.");
 }
 
 function ans() {
-Answer=document.getElementById('question');
+Answer=document.getElementById('question');  
 if (Answer.value == numC) {
 correct++;
 msg = "Congratulations, your answer is correct.";
