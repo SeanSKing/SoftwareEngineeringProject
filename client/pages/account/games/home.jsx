@@ -54,6 +54,18 @@ class HomePage extends React.Component {
                         </div>
                     </div>
                 </div>
+                
+                <div className="row">
+                    <div className="col-sm-7">
+                        <h1 className="page-header">Algebra Attack</h1>
+                        <div className="row">
+                            <div className="col-sm-6">
+                            <a href="#">Coming soon</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
             </section>
         );
     }
