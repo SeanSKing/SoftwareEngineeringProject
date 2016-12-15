@@ -19,7 +19,7 @@ var create_payment_json = {
         "payment_method": "paypal"
     },
     "redirect_urls": {
-        "return_url": "http://mathattack.herokuapp.com/", //need to create a thank you page
+        "return_url": "http://mathattack.herokuapp.com/", //back to home page after donation
         "cancel_url": "http://mathattack.herokuapp.com/donate" // back to donation page if it fails
     },
     "transactions": [{
@@ -58,7 +58,7 @@ class Actions {
     static sendMessage(data) {
 
         ApiActions.post(
-          '/api/contact',
+          '/api/donate',
            data,
            Store,
            Constants.SEND_MESSAGE,
