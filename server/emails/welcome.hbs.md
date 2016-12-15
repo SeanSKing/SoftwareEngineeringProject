@@ -1,6 +1,6 @@
 ### Welcome Aboard
 
-Thanks for signing up. As requested, your account has been created.
+Thanks for signing up for Math Attack. As requested, your account has been created.
 Here are your login credentials:
 
 | Details   |              |
@@ -8,6 +8,5 @@ Here are your login credentials:
 | Username: | {{username}} |
 | Email:    | {{email}}    |
 
-Love,
-
-The Plot Device
+Thank you
+Math Attack
