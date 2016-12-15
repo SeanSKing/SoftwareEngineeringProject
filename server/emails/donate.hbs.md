@@ -6,6 +6,5 @@
 | Email:   | {{email}}   |
 | Message: | {{message}} |
 
-Love,
-
-The Plot Device
+Thank you for your donation.
+-Math Attack
