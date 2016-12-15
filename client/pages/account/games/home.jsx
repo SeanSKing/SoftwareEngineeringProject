@@ -49,7 +49,7 @@ class HomePage extends React.Component {
                         <h1 className="page-header">Arithmetic Attack v1.00</h1>
                         <div className="row">
                             <div className="col-sm-6">
-                            <a href="javascript:window.open('/public/media/game1/index.html','game','width=900,height=600,left=0,top=0');">Click here to play</a>
+                            <a href="javascript:window.open('/public/media/game1/index.html','game','width=1000,height=650,left=0,top=0');">Click here to play</a>
                             </div>
                         </div>
                     </div>
@@ -65,6 +65,18 @@ class HomePage extends React.Component {
                         </div>
                     </div>
                 </div>
+                
+                    <div className="row">
+                    <div className="col-sm-7">
+                        <h1 className="page-header">Geometry Attack</h1>
+                        <div className="row">
+                            <div className="col-sm-6">
+                            <a href="#">Coming soon</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
                 
             </section>
         );
